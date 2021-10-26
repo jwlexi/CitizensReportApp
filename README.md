@@ -1,6 +1,6 @@
 # CitizensReportApp
 
-Alexis Sanchez 
-Andrew Mei
-Jeremy Meharg
-Nayeli De Jesus
+Alexis Sanchez <br />
+Andrew Mei <br />
+Jeremy Meharg <br />
+Nayeli De Jesus <br />
