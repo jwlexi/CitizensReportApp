@@ -1,6 +1,6 @@
 # CitizensReportApp
 
-Alexis Sanchez: Github.com/jwlexi <br />
-Andrew Mei: Github.com/AndrewMei99 <br />
-Jeremy Meharg: Github.com/JeremyMeh <br />
-Nayeli De Jesus: Github.com/nayelimdejesus <br />
+Alexis Sanchez: https://github.com/jwlexi <br />
+Andrew Mei: https://github.com/AndrewMei99 <br />
+Jeremy Meharg: https://github.com/JeremyMeh <br />
+Nayeli De Jesus: https://github.com/nayelimdejesus <br />
