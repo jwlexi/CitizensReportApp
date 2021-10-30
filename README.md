@@ -33,46 +33,45 @@ Mockup:
 Tenative API endpoints:
 <br>
 Log out of account
-POST/GET [url]/logout?username={username}
+- POST/GET [url]/logout?username={username}
 <br>
 Delete account
-DELETE [url]/logout?username={username}
+- DELETE [url]/logout?username={username}
 <br>
 View all users
-GET: [URL]/users
+- GET: [URL]/users
 <br>
 Create users
-PUT: [URL]/users?username={username}&{...}
+- PUT: [URL]/users?username={username}&{...}
 <br>
 Delete users
-DELETE: [URL]/users?username={username}
+- DELETE: [URL]/users?username={username}
 <br>
 Update users
-PATCH: [URL]/users?username={username}&{...}
+- PATCH: [URL]/users?username={username}&{...}
 <br>
 Add new post
-POST [URL]/userpost?post_name={post name}&url={url}
+- POST [URL]/userpost?post_name={post name}&url={url}
 <br>
 Remove card
-DELETE [URL]/userpost?post_name={post name}
+- DELETE [URL]/userpost?post_name={post name}
 <br>
 Update posts
-PATCH [URL]/userpost?post_name={post name}
+- PATCH [URL]/userpost?post_name={post name}
 <br>
 Admin Login
-POST: [url]/login?username={username}&password={password}
+- POST: [url]/login?username={username}&password={password}
 <br>
 View all users
-GET: [URL]/users
+- GET: [URL]/users
 <br>
 Create Users
-PUT: [URL]/users?username={username}&{...}
+- PUT: [URL]/users?username={username}&{...}
 <br>
 Delete users
-DELETE: [URL]/users?username={username}
+- DELETE: [URL]/users?username={username}
 Must ask for confirmation
 <br>
 Update users
-PATCH: [URL]/users?username={username}&{...}
-
+- PATCH: [URL]/users?username={username}&{...}
 </h3>
