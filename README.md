@@ -20,6 +20,8 @@ The Problem: Citizens throughout a community often lack an ability to communicat
 <h3>
 Tech stack:
 Frontend - Android
+<br>
 Persistence/Database - MongoDB
+<br>
 Backend - Node.js
 </h3>
