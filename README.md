@@ -13,7 +13,9 @@ Problem Statement: Citizens will be able to report problems throughout their com
   
 Description: The Citizens Report application would allow users to make posts, see posts, view posts destination, and edit posts.
   
-The Problem: Citizens throughout a community often lack an ability to communicate with each other effectively. This could cause problems throughout the community such as safety hazards, violence, and a higher crime rate. People need a good way to communicate with each other throughout their city. They also need to be able to pinpoint the exact location of a problem that is being caused around the city.
+The problem: Citizens throughout a community often lack an ability to communicate with each other effectively. This could cause problems throughout the community such as safety hazards, violence, and a higher crime rate. People need a good way to communicate with each other throughout their city. They also need to be able to pinpoint the exact location of a problem that is being caused around the city.
+  
+The solution: Citizen's report app will allow users to create posts to notify others of issues who also use the app to keep others updated.
 </h2>
 <h3>
 Tech stack:
