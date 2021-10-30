@@ -9,3 +9,4 @@ Nayeli De Jesus: https://github.com/nayelimdejesus <br />
 
 <strong> Presentation: </strong> https://docs.google.com/presentation/d/1gTKdX_f3LIyOEOvmpdMm1UVtcqbnnPuZGOZLRVZV5G4/edit#slide=id.p
 
+<h1> This is an application that will allow users to create posts regarding issues in the community. </h1>
