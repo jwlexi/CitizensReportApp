@@ -27,5 +27,4 @@ Persistence/Database - MongoDB
 Backend - Node.js
 <br>
 Mockup:
-![image](https://user-images.githubusercontent.com/44917258/139520461-11e75221-5f4f-4682-a33e-9d5bc94e9c93.png)
 </h3>
