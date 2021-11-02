@@ -30,11 +30,14 @@ mongoClient.connect(url, (err, db) => {
                     res.status(400).send();
                 }
             })
+            console.log("This is working");
         })
 
         app.post('/login', (req, res) => {
-            const query = {username: req.body.username,
-            password: req.body.password}
+            const query = {
+                username: req.body.username,
+                password: req.body.password
+            }
 
             usersCollection.findOne(query, (err, result) => {
                 if (result != null) {

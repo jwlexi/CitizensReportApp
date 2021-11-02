@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
     private String BASE_URL = "http://10.0.2.2:3000";
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 HashMap<String, String> map = new HashMap<>();
                 map.put("username", userEdit.getText().toString());
-                map.put("password", userEdit.getText().toString());
+                map.put("password", passwordEdit.getText().toString());
 
                 Call<Void> call = retrofitInterface.executeRegister(map);
                 call.enqueue(new Callback<Void>() {
@@ -125,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });
+//                Toast.makeText(MainActivity.this, "This button works", Toast.LENGTH_LONG).show();
             }
         });
 
