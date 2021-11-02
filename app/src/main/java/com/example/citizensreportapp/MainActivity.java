@@ -30,6 +30,20 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //handleLoginDialog();
+            }
+        });
+
+        findViewById(R.id.register).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //handleRegisterDialog();
+            }
+        });
     }
 
     @Override
