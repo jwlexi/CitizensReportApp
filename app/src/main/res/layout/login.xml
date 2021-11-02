@@ -23,7 +23,7 @@
         android:hint="@string/enter_password"/>
 
     <Button
-        android:id="@+id/checkUserInfo"
+        android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/login" />
