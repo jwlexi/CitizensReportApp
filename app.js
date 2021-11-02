@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const mongoClient = require('mongodb').mongoClient
+const mongoClient = require('mongodb').MongoClient
 
 const url = "mongodb://localhost:27017"
 

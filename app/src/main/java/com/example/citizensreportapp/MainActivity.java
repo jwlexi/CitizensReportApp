@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
-    private String BASE_URL = "";
+    private String BASE_URL = "http://10.0.2.2:3000";
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,7 +71,17 @@ public class MainActivity extends AppCompatActivity {
                 call.enqueue(new Callback<Login>() {
                     @Override
                     public void onResponse(Call<Login> call, Response<Login> response) {
+                        if(response.code() == 200) {
 
+                            Login res = response.body();
+
+                            AlertDialog.Builder b1 = new AlertDialog.Builder(MainActivity.this);
+                            b1.setTitle(res.getUsername());
+                            b1.show();
+                        }
+                        else if(response.code() == 404) {
+                            Toast.makeText(MainActivity.this, "Wrong credentials", Toast.LENGTH_LONG).show();
+                        }
                     }
 
                     @Override
@@ -101,7 +112,12 @@ public class MainActivity extends AppCompatActivity {
                 call.enqueue(new Callback<Void>() {
                     @Override
                     public void onResponse(Call<Void> call, Response<Void> response) {
-                        
+                        if(response.code() == 200) {
+                            Toast.makeText(MainActivity.this, "Successful sign up", Toast.LENGTH_LONG).show();
+                        }
+                        else if(response.code() == 400) {
+                            Toast.makeText(MainActivity.this, "User already registered", Toast.LENGTH_LONG).show();
+                        }
                     }
 
                     @Override
