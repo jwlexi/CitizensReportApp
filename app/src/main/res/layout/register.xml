@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    tools:context=".Login"
+    tools:context=".Register"
     android:background="#ADD8E6">
 
 
@@ -23,9 +23,9 @@
         android:hint="@string/enter_password"/>
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/login" />
+        android:text="Register" />
 
 </LinearLayout>
