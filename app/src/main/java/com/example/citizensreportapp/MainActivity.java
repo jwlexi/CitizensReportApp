@@ -1,5 +1,6 @@
 package com.example.citizensreportapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -73,11 +74,13 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(Call<Login> call, Response<Login> response) {
                         if(response.code() == 200) {
 
-                            Login res = response.body();
-
-                            AlertDialog.Builder b1 = new AlertDialog.Builder(MainActivity.this);
-                            b1.setTitle(res.getUsername());
-                            b1.show();
+//                            Login res = response.body();
+//
+//                            AlertDialog.Builder b1 = new AlertDialog.Builder(MainActivity.this);
+//                            b1.setTitle(res.getUsername());
+//                            b1.setMessage("Welcome, thank you for logging in");
+//                            b1.show();
+                            startActivity(new Intent(MainActivity.this, Home.class));
                         }
                         else if(response.code() == 404) {
                             Toast.makeText(MainActivity.this, "Wrong credentials", Toast.LENGTH_LONG).show();
