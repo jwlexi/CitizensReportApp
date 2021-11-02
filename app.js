@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const mongoClient = require('mongodb').MongoClient
 
-const url = "mongodb://localhost:27017"
+const url = "mongodb+srv://lexi:lexi2021@cluster0.1dnvl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 app.use(express.json());
 
@@ -30,7 +30,6 @@ mongoClient.connect(url, (err, db) => {
                     res.status(400).send();
                 }
             })
-            console.log("This is working");
         })
 
         app.post('/login', (req, res) => {
