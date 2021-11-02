@@ -48,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.view_my_posts) {
+            return true; //add activity
+        }
+        else if(id == R.id.create_post){
+            return true; //add activity
+        }
+        else if(id == R.id.about){
             return true;
         }
 
