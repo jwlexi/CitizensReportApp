@@ -12,7 +12,7 @@ mongoClient.connect(url, (err, db) => {
     }
     else {
         const myDb = db.db('myDb')
-        const collection = myDb.collection('tableC')
+        const usersCollection = myDb.collection('users')
 
         app.post('/register', (req, res) => {
             const newUser = {
@@ -20,9 +20,9 @@ mongoClient.connect(url, (err, db) => {
                 password: req.body.password
             }
             const query = {username: newUser.username}
-            collection.findOne(query, (err, result) => {
+            usersCollection.findOne(query, (err, result) => {
                 if(result == null) {
-                    collection.insertOne(newUser, (err, result) => {
+                    usersCollection.insertOne(newUser, (err, result) => {
                         res.status(200).send();
                     })
                 }
@@ -36,7 +36,7 @@ mongoClient.connect(url, (err, db) => {
             const query = {username: req.body.username,
             password: req.body.password}
 
-            collection.findOne(query, (err, result) => {
+            usersCollection.findOne(query, (err, result) => {
                 if (result != null) {
                     const finalobj = {
                         username: result.username
