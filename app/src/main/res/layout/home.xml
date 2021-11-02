@@ -15,8 +15,8 @@
         android:textSize="35sp"
         android:textStyle="bold"
         android:textColor="@color/black"
+        android:background="#add8e6"
         />
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
