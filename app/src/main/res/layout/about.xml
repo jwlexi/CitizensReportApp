@@ -7,11 +7,21 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="312dp"
-        android:layout_height="147dp"
+        android:layout_width="330dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="32dp"
         android:text="The Citizens Report application allows users to report problems throughout their community. This app would allow users to create an account, login, create posts, view posts, view posts’ location, and edit/update the posts they created. Other users will be able to see each other’s posts."
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="94dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="339dp"
+        android:layout_height="104dp"
+        android:text="Citizens throughout a community often lack an ability to communicate with each other effectively. This could cause problems throughout the community such as safety hazards, violence, and a higher crime rate. People need a good way to communicate with each other throughout their city. They also need to be able to pinpoint the exact location of a problem that is being caused around the city."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="56dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
