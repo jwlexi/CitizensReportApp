@@ -47,4 +47,12 @@
         android:id="@+id/register"
         android:text="Register"
         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="App designed by Andrew Mei, Jeremy Meharg, Nayeli De Jesus, and Alexis Sanchez"
+        android:textColor="#808080"
+        android:textSize="12sp" />
 </LinearLayout>
