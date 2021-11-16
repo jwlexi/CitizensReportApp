@@ -12,4 +12,6 @@ public interface RetrofitInterface {
 
     @POST("/register")
     Call<Void> executeRegister(@Body HashMap<String, String> map);
+
+
 }
