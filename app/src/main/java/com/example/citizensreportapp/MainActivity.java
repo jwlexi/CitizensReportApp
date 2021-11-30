@@ -53,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
                 handleRegister();
             }
         });
+        findViewById(R.id.adminLogin).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.activity_main);
+            }
+        });
     }
 
     private void handleLogin() {
