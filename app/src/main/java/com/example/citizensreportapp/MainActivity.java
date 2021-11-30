@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
                 handleRegister();
             }
         });
-
         textViewResult = findViewById(R.id.text_view_result);
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("hhtps://jsonplaceholder.typicode.com/")
@@ -91,6 +90,13 @@ public class MainActivity extends AppCompatActivity {
                 textViewResult.setText(t.getMessage());
             }
         });*/
+      
+      findViewById(R.id.adminLogin).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.activity_main);
+            }
+        });
     }
 
     private void handleLogin() {
