@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../Android/CitizensReportApp/app/src/main/res/layout/activity_main.xml" value="0.21105072463768115" />
+        <entry key="../../Android/CitizensReportApp/app/src/main/res/layout/home.xml" value="0.21105072463768115" />
+        <entry key="../../Android/CitizensReportApp/app/src/main/res/layout/login.xml" value="0.1752786220871327" />
+        <entry key="../../Android/CitizensReportApp/app/src/main/res/layout/post.xml" value="0.26902173913043476" />
+        <entry key="../../Android/CitizensReportApp/app/src/main/res/layout/register.xml" value="0.21105072463768115" />
+        <entry key="../../Android/CitizensReportApp/app/src/main/res/layout/search.xml" value="0.21105072463768115" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2520833333333333" />
         <entry key="app/src/main/res/layout/home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/login.xml" value="0.11" />
