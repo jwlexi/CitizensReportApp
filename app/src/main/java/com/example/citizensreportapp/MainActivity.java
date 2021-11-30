@@ -16,9 +16,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.BreakIterator;
 import java.util.HashMap;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -31,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
     private String BASE_URL = "http://10.0.2.2:3000";
+    private TextView textViewResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
-        retrofitInterface = retrofit.create(RetrofitInterface.class);
+        //retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
+        //retrofitInterface = retrofit.create(RetrofitInterface.class);
 
         findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +57,41 @@ public class MainActivity extends AppCompatActivity {
                 handleRegister();
             }
         });
-        findViewById(R.id.adminLogin).setOnClickListener(new View.OnClickListener() {
+        textViewResult = findViewById(R.id.text_view_result);
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("hhtps://jsonplaceholder.typicode.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        RetrofitInterface jsonPlaceHolderApi = retrofit.create(RetrofitInterface.class);
+
+        /*Call<List<Post>> call = jsonPlaceHolderApi.getPosts();
+
+        call.enqueue(new Callback<List<Post>>() {
+            @Override
+            public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
+                if (!response.isSuccessful()) {
+                    textViewResult.setText("Code: " + response.code());
+                    return;
+                }
+                List<Post> posts = response.body();
+
+                for (Post post : posts) {
+                    String s = "";
+                    s += "User Id: " + post.getUserId() + "\n";
+                    s += "Id: " + post.getId() + "\n";
+                    s += "Title: " + post.getTitle() + "\n";
+                    s += "Text: " + post.getText() + "\n";
+                    textViewResult.append(s);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Post>> call, Throwable t) {
+                textViewResult.setText(t.getMessage());
+            }
+        });*/
+      
+      findViewById(R.id.adminLogin).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setContentView(R.layout.activity_main);
@@ -167,4 +205,8 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    /*private void createPost() {
+        Post post = new Post(userId: 5, title: "Title", text: "Text");
+    }*/
 }
