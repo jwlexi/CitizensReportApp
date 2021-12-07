@@ -21,7 +21,7 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/adminLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -35,6 +35,7 @@
         android:layout_width="410dp"
         android:layout_height="608dp"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="122dp" />
+        tools:layout_editor_absoluteY="122dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
