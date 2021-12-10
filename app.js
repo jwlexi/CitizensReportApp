@@ -13,6 +13,7 @@ mongoClient.connect(url, (err, db) => {
     else {
         const myDb = db.db('myDb')
         const usersCollection = myDb.collection('users')
+        const postsCollection = myDb.collection('posts')
 
         app.post('/register', (req, res) => {
             const newUser = {
@@ -47,6 +48,23 @@ mongoClient.connect(url, (err, db) => {
                 }
                 else {
                     res.status(404).send();
+                }
+            })
+        })
+        app.post('/create', (req, res) => {
+            const newPost = {
+                title: req.body.title,
+                text: req.body.text
+            }
+            const postQuery = {title: newPost.title}
+            postsCollection.findOne(postQuery, (err, result) => {
+                if(result == null) {
+                    postsCollection.insertOne(newPost, (err, result) => {
+                        res.status(200).send();
+                    })
+                }
+                else {
+                    res.status(400).send();
                 }
             })
         })
