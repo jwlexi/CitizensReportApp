@@ -23,6 +23,9 @@ public interface RetrofitInterface {
     @POST("/register")
     Call<Void> executeRegister(@Body HashMap<String, String> map);
 
+    @POST("/create")
+    Call<Void> executeCreate(@Body HashMap<String, String> map);
+
     @GET("posts")
     Call<List<Post>> getPosts(
       @Query("userId") Integer[] userId,

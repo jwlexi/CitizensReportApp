@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        //retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
-        //retrofitInterface = retrofit.create(RetrofitInterface.class);
+        retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
+        retrofitInterface = retrofit.create(RetrofitInterface.class);
 
         findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,9 +57,8 @@ public class MainActivity extends AppCompatActivity {
                 handleRegister();
             }
         });
-        textViewResult = findViewById(R.id.text_view_result);
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("hhtps://jsonplaceholder.typicode.com/")
+                .baseUrl("https://jsonplaceholder.typicode.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         RetrofitInterface jsonPlaceHolderApi = retrofit.create(RetrofitInterface.class);
@@ -117,13 +116,6 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<Login> call, Response<Login> response) {
                         if(response.code() == 200) {
-
-//                            Login res = response.body();
-//
-//                            AlertDialog.Builder b1 = new AlertDialog.Builder(MainActivity.this);
-//                            b1.setTitle(res.getUsername());
-//                            b1.setMessage("Welcome, thank you for logging in");
-//                            b1.show();
                             startActivity(new Intent(MainActivity.this, Home.class));
                         }
                         else if(response.code() == 404) {
