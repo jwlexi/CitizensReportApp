@@ -1,5 +1,6 @@
 package com.example.citizensreportapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -49,8 +50,8 @@ public class Home extends AppCompatActivity {
     private void handlePost() {
         View view = getLayoutInflater().inflate(R.layout.post, null);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setView(view).show();
-
+        builder.setView(view);
+        final AlertDialog show = builder.show();
         Button createPostButton = view.findViewById(R.id.createP);
         EditText userTitle = view.findViewById(R.id.cin_title);
         EditText userText = view.findViewById(R.id.cin_text);
@@ -68,6 +69,8 @@ public class Home extends AppCompatActivity {
                     public void onResponse(Call<Void> call, Response<Void> response) {
                         if(response.code() == 200) {
                             Toast.makeText(Home.this, "Successful creation", Toast.LENGTH_LONG).show();
+                            show.dismiss();
+                            
                         }
                     }
 
@@ -76,7 +79,6 @@ public class Home extends AppCompatActivity {
                         Toast.makeText(Home.this, t.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });
-//                Toast.makeText(MainActivity.this, "This button works", Toast.LENGTH_LONG).show();
             }
         });
 
