@@ -46,12 +46,20 @@ public class Home extends AppCompatActivity {
                 handlePost();
             }
         });
+        Button displayPostsButton = (Button) findViewById(R.id.displayPostsButton);
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://jsonplaceholder.typicode.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         RetrofitInterface jsonPlaceHolderApi = retrofit.create(RetrofitInterface.class);
         displayPosts();
+
+        displayPostsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                displayPosts();
+            }
+        });
     }
 
     private void handlePost() {
