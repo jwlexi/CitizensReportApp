@@ -35,6 +35,12 @@ public interface RetrofitInterface {
       @Query("text") String fText
     );
 
+    @GET("/retrieveUserData")
+    Call<List<User>> retrieveUsers(
+            @Query("username") String fUser,
+            @Query("password") String fPass
+    );
+
     @GET("posts")
     Call<List<Post>> getPosts(@QueryMap Map<String, String> parameters);
 

@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
       findViewById(R.id.adminLogin).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.admin_page);
+                startActivity(new Intent(MainActivity.this, AdminPage.class));
             }
         });
     }
