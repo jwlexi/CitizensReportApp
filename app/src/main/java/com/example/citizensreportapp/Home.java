@@ -47,6 +47,7 @@ public class Home extends AppCompatActivity {
             }
         });
         Button displayPostsButton = (Button) findViewById(R.id.displayPostsButton);
+        Button logout = (Button) findViewById(R.id.logout);
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://jsonplaceholder.typicode.com/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -58,6 +59,13 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 displayPosts();
+            }
+        });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
             }
         });
     }
