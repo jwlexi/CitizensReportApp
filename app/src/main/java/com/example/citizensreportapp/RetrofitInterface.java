@@ -26,11 +26,13 @@ public interface RetrofitInterface {
     @POST("/create")
     Call<Void> executeCreate(@Body HashMap<String, String> map);
 
-    @GET("posts")
-    Call<List<Post>> getPosts(
-      @Query("userId") Integer[] userId,
-      @Query("_sort") String sort,
-      @Query("_order") String order
+//    @GET("/retrievePostData")
+//    Call<Post> retrievePosts(@Body HashMap<String, String> map);
+
+    @GET("/retrievePostData")
+    Call<List<Post>> retrievePosts(
+      @Query("title") String fTitle,
+      @Query("text") String fText
     );
 
     @GET("posts")

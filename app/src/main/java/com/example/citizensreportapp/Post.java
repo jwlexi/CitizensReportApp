@@ -2,18 +2,22 @@ package com.example.citizensreportapp;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class Post {
     private int userId;
     private Integer id;
-    private String title;
+    private String title, text;
 
-    @SerializedName("body")
-    private String text;
+//    public Post(int userId, String title, String text) {
+//        this.userId = userId;
+//        this.title = title;
+//        this.text = text;
+//    }
+    private List<Post> data;
 
-    public Post(int userId, String title, String text) {
-        this.userId = userId;
-        this.title = title;
-        this.text = text;
+    public List<Post> getData() {
+        return data;
     }
 
     public int getUserId() {
@@ -30,5 +34,10 @@ public class Post {
 
     public String getText() {
         return text;
+    }
+
+    @Override
+    public String toString() {
+        return  "Title: " + title + "\nText: " + text;
     }
 }

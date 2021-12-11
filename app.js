@@ -6,6 +6,23 @@ const url = "mongodb+srv://lexi:lexi2021@cluster0.1dnvl.mongodb.net/myFirstDatab
 
 app.use(express.json());
 
+
+const mongoose = require('mongoose');
+
+const blogSchema = new mongoose.Schema({
+    title: {
+        type: String
+    },
+    text: {
+        type: String
+    }
+})
+
+const Blog = mongoose.model('Blog', blogSchema);
+
+module.exports = Blog;
+
+
 mongoClient.connect(url, (err, db) => {
     if(err) {
         console.log("Error while connecting to mongo client")
@@ -68,6 +85,40 @@ mongoClient.connect(url, (err, db) => {
                 }
             })
         })
+        // app.get('/retrievePostData', async (req, res) => {
+        //     const query = {
+        //         title: req.body.title,
+        //         text: req.body.text
+        //     }
+        //     // for (x of postsCollection) {
+        //     //     const finalObj = {
+        //     //         title: x.title,
+        //     //         text: x.text
+        //     //     }
+        //     //     res.status(200).send(JSON.stringify(finalobj));
+        //     // }
+        //     let reportsSql = "select * from postsCollection";
+        //     let rows = await executeSQL(reportsSql);
+        //     res.status(200).send(JSON.stringify(finalobj));
+
+        // })
+
+        app.get('/retrievePostData', async function(req, res){
+            myDb.collection("posts").find({}).toArray(function(err, result) {
+                if (err) throw err;
+                res.status(200).send(result)
+          });
+
+        });
+
+        async function executeSQL(sql, params) {
+          return new Promise (function (resolve, reject) {
+            pool.query(sql, params, function (err, rows, fields) {
+            if (err) throw err;
+              resolve(rows);
+            });
+          });
+}
     }
 });
 
