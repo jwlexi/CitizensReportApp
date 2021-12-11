@@ -111,6 +111,15 @@ mongoClient.connect(url, (err, db) => {
 
         });
 
+        app.get('/retrieveUserData', async function(req, res){
+            myDb.collection("users").find({}).toArray(function(err, result) {
+                if (err) throw err;
+                res.status(200).send(result)
+          });
+
+        });
+
+
         async function executeSQL(sql, params) {
           return new Promise (function (resolve, reject) {
             pool.query(sql, params, function (err, rows, fields) {
