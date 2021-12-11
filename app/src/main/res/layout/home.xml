@@ -25,6 +25,14 @@
         android:layout_gravity="center"
         android:text="Create Post" />
 
+    <Button
+        android:id="@+id/displayPostsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Display Posts" />
+
+
     <ListView
         android:id="@+id/transactions"
         android:layout_width="match_parent"
