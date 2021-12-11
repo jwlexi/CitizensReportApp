@@ -43,7 +43,6 @@ public class AdminPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(AdminPage.this, MainActivity.class));
-                Log.d("Markassbrownlee", "This is working");
             }
         });
     }
